@@ -46,4 +46,7 @@ const styles = StyleSheet.create({
 	fontSize: 18,
     marginBottom: 5,
   },
+  gambar: {
+	  height: 400,
+	  width:400,
 });
