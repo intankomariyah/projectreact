@@ -9,24 +9,33 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  Image
 } from 'react-native';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
-  android: 'Nama : Intan Komariyah\n' +
-    'Kelas : XI RPL 1\n' +
-	'No    : 16',
+  android: 'Double tap R on your keyboard to reload,\n' +
+  	'Shake or Press menu button for dev menu',
+    
 });
 
 type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <View style={styles.container}>
+    	<View style={styles.container}>
+		<Image style={{width: 200, height: 250}} 
+        source={require('./intan.jpg')} />
         <Text style={styles.instructions}>
-          {instructions}
+        Nama : Intan Komariyah
+        </Text>
+        <Text style={styles.instructions}>
+        Kelas : XI RPL 1
+        </Text>
+        <Text style={styles.instructions}>
+        No Absen : 16
         </Text>
       </View>
     );
@@ -38,7 +47,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'cyan',
+    backgroundColor: '#0070B3',
+  },
+  welcome: {
+  	fontSize: 25,
+  	textAlign: 'center',
+  	margin: 10,
   },
   instructions: {
     textAlign: 'left',
@@ -46,7 +60,5 @@ const styles = StyleSheet.create({
 	fontSize: 18,
     marginBottom: 5,
   },
-  gambar: {
-	  height: 400,
-	  width:400,
+ 
 });
